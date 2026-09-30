@@ -1,0 +1,8 @@
+{
+  "synthetic": true,
+  "seed": 20260901,
+  "generator": "scripts/generate_sample_data.py",
+  "documents": 24,
+  "golden_questions": 40,
+  "dataset_sha256": "01877b55f9efee15ce027b1f8213ec5db17825d38e74de0557df7ef9e219a15c"
+}

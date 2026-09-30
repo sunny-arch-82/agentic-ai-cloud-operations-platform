@@ -1,0 +1,46 @@
+name: CI
+on:
+  push:
+    branches: [main, develop, 'feature/**']
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    services:
+      postgres:
+        image: pgvector/pgvector:0.8.1-pg16
+        env:
+          POSTGRES_USER: opspilot
+          POSTGRES_PASSWORD: ci-ephemeral-only
+          POSTGRES_DB: opspilot_test
+        ports: ['5432:5432']
+        options: >-
+          --health-cmd "pg_isready -U opspilot -d opspilot_test"
+          --health-interval 5s --health-timeout 5s --health-retries 10
+    env:
+      OPSPILOT_MODE: demo
+      OPSPILOT_DATABASE_URL: postgresql+psycopg://opspilot:ci-ephemeral-only@localhost:5432/opspilot_test
+      OPSPILOT_TEST_DATABASE_URL: postgresql+psycopg://opspilot:ci-ephemeral-only@localhost:5432/opspilot_test
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          version: '0.12.18'
+          python-version: '3.12'
+          enable-cache: true
+      - run: uv sync --frozen
+      - run: uv run ruff check . && uv run ruff format --check .
+      - run: uv run opspilot bootstrap
+      - run: uv run pytest -q
+      - run: uv run opspilot mcp-check --output evals/local-results/mcp.json
+      - run: uv run opspilot eval --kind retrieval --split test --output evals/local-results/retrieval.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: evaluation-smoke-results
+          path: evals/local-results/

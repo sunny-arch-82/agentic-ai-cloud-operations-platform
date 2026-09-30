@@ -1,0 +1,32 @@
+[
+  {
+    "dataset_id": "s01",
+    "expected": "database connection exhaustion",
+    "answerable": true
+  },
+  {
+    "dataset_id": "s02",
+    "expected": "downstream payment timeout",
+    "answerable": true
+  },
+  {
+    "dataset_id": "s03",
+    "expected": "deployment serialization regression",
+    "answerable": true
+  },
+  {
+    "dataset_id": "s04",
+    "expected": "benign traffic increase",
+    "answerable": true
+  },
+  {
+    "dataset_id": "s05",
+    "expected": "insufficient evidence",
+    "answerable": false
+  },
+  {
+    "dataset_id": "s06",
+    "expected": "database connection exhaustion; deployment after onset",
+    "answerable": true
+  }
+]

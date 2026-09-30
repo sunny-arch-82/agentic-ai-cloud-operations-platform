@@ -1,0 +1,44 @@
+x-app: &app
+  build: .
+  env_file: .env
+  environment:
+    OPSPILOT_DATABASE_URL: postgresql+psycopg://opspilot:${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}@db:5432/opspilot
+  init: true
+
+services:
+  db:
+    image: pgvector/pgvector:0.8.1-pg16
+    environment:
+      POSTGRES_USER: opspilot
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
+      POSTGRES_DB: opspilot
+    ports:
+      - "127.0.0.1:5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U opspilot -d opspilot"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+  bootstrap:
+    <<: *app
+    command: ["opspilot", "bootstrap", "--allow-paid"]
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: "no"
+  api:
+    <<: *app
+    ports:
+      - "127.0.0.1:8000:8000"
+    depends_on:
+      bootstrap:
+        condition: service_completed_successfully
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/ready')"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+volumes:
+  postgres_data:

@@ -1,0 +1,6 @@
+{
+  "question": "How should we investigate DB_POOL_TIMEOUT connection exhaustion?",
+  "service": "checkout",
+  "reference_time": "2026-09-01T12:00:00Z",
+  "retrieval_mode": "hybrid"
+}

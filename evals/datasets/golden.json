@@ -1,0 +1,452 @@
+[
+  {
+    "id": "q-01",
+    "split": "dev",
+    "question": "Database connection pool exhaustion DB_POOL_TIMEOUT",
+    "service": "postgres",
+    "reference_time": "2026-09-01T12:00:00+00:00",
+    "answerable": true,
+    "relevant_sections": [
+      "rb-db-pool:interpretation",
+      "rb-db-pool:diagnostic-steps"
+    ]
+  },
+  {
+    "id": "q-02",
+    "split": "dev",
+    "question": "How should we investigate database connection pool exhaustion?",
+    "service": "postgres",
+    "reference_time": "2026-09-01T12:00:00+00:00",
+    "answerable": true,
+    "relevant_sections": [
+      "rb-db-pool:interpretation",
+      "rb-db-pool:diagnostic-steps"
+    ]
+  },
+  {
+    "id": "q-03",
+    "split": "dev",
+    "question": "Downstream payment timeout PSP_TIMEOUT",
+    "service": "payments",
+    "reference_time": "2026-09-01T12:00:00+00:00",
+    "answerable": true,
+    "relevant_sections": [
+      "rb-payment-timeout:interpretation",
+      "rb-payment-timeout:diagnostic-steps"
+    ]
+  },
+  {
+    "id": "q-04",
+    "split": "dev",
+    "question": "How should we investigate downstream payment timeout?",
+    "service": "payments",
+    "reference_time": "2026-09-01T12:00:00+00:00",
+    "answerable": true,
+    "relevant_sections": [
+      "rb-payment-timeout:interpretation",
+      "rb-payment-timeout:diagnostic-steps"
+    ]
+  },
+  {
+    "id": "q-05",
+    "split": "dev",
+    "question": "Checkout serialization regression SERIALIZATION_ERROR",
+    "service": "checkout",
+    "reference_time": "2026-09-01T12:00:00+00:00",
+    "answerable": true,
+    "relevant_sections": [
+      "rb-serialization:interpretation",
+      "rb-serialization:diagnostic-steps"
+    ]
+  },
+  {
+    "id": "q-06",
+    "split": "dev",
+    "question": "How should we investigate checkout serialization regression?",
+    "service": "checkout",
+    "reference_time": "2026-09-01T12:00:00+00:00",
+    "answerable": true,
+    "relevant_sections": [
+      "rb-serialization:interpretation",
+      "rb-serialization:diagnostic-steps"
+    ]
+  },
+  {
+    "id": "q-07",
+    "split": "dev",
+    "question": "Benign traffic increase TRAFFIC_GROWTH",
+    "service": "checkout",
+    "reference_time": "2026-09-01T12:00:00+00:00",
+    "answerable": true,
+    "relevant_sections": [
+      "rb-traffic:interpretation",
+      "rb-traffic:diagnostic-steps"
+    ]
+  },
+  {
+    "id": "q-08",
+    "split": "dev",
+    "question": "How should we investigate benign traffic increase?",
+    "service": "checkout",
+    "reference_time": "2026-09-01T12:00:00+00:00",
+    "answerable": true,
+    "relevant_sections": [
+      "rb-traffic:interpretation",
+      "rb-traffic:diagnostic-steps"
+    ]
+  },
+  {
+    "id": "q-09",
+    "split": "dev",
+    "question": "Missing telemetry and partial evidence missing",
+    "service": "checkout",
+    "reference_time": "2026-09-01T12:00:00+00:00",
+    "answerable": true,
+    "relevant_sections": [
+      "rb-missing:interpretation",
+      "rb-missing:diagnostic-steps"
+    ]
+  },
+  {
+    "id": "q-10",
+    "split": "dev",
+    "question": "How should we investigate missing telemetry and partial evidence?",
+    "service": "checkout",
+    "reference_time": "2026-09-01T12:00:00+00:00",
+    "answerable": true,
+    "relevant_sections": [
+      "rb-missing:interpretation",
+      "rb-missing:diagnostic-steps"
+    ]
+  },
+  {
+    "id": "q-11",
+    "split": "test",
+    "question": "Deployment correlation and causal uncertainty deployment",
+    "service": "checkout",
+    "reference_time": "2026-09-01T12:00:00+00:00",
+    "answerable": true,
+    "relevant_sections": [
+      "rb-correlation:interpretation",
+      "rb-correlation:diagnostic-steps"
+    ]
+  },
+  {
+    "id": "q-12",
+    "split": "test",
+    "question": "How should we investigate deployment correlation and causal uncertainty?",
+    "service": "checkout",
+    "reference_time": "2026-09-01T12:00:00+00:00",
+    "answerable": true,
+    "relevant_sections": [
+      "rb-correlation:interpretation",
+      "rb-correlation:diagnostic-steps"
+    ]
+  },
+  {
+    "id": "q-13",
+    "split": "test",
+    "question": "Inventory reservation failures RESERVATION_CONFLICT",
+    "service": "inventory",
+    "reference_time": "2026-09-01T12:00:00+00:00",
+    "answerable": true,
+    "relevant_sections": [
+      "rb-inventory:interpretation",
+      "rb-inventory:diagnostic-steps"
+    ]
+  },
+  {
+    "id": "q-14",
+    "split": "test",
+    "question": "How should we investigate inventory reservation failures?",
+    "service": "inventory",
+    "reference_time": "2026-09-01T12:00:00+00:00",
+    "answerable": true,
+    "relevant_sections": [
+      "rb-inventory:interpretation",
+      "rb-inventory:diagnostic-steps"
+    ]
+  },
+  {
+    "id": "q-15",
+    "split": "test",
+    "question": "Slow database queries SLOW_QUERY",
+    "service": "postgres",
+    "reference_time": "2026-09-01T12:00:00+00:00",
+    "answerable": true,
+    "relevant_sections": [
+      "rb-slow-query:interpretation",
+      "rb-slow-query:diagnostic-steps"
+    ]
+  },
+  {
+    "id": "q-16",
+    "split": "test",
+    "question": "How should we investigate slow database queries?",
+    "service": "postgres",
+    "reference_time": "2026-09-01T12:00:00+00:00",
+    "answerable": true,
+    "relevant_sections": [
+      "rb-slow-query:interpretation",
+      "rb-slow-query:diagnostic-steps"
+    ]
+  },
+  {
+    "id": "q-17",
+    "split": "test",
+    "question": "Retry amplification RETRY_BURST",
+    "service": "payments",
+    "reference_time": "2026-09-01T12:00:00+00:00",
+    "answerable": true,
+    "relevant_sections": [
+      "rb-retry:interpretation",
+      "rb-retry:diagnostic-steps"
+    ]
+  },
+  {
+    "id": "q-18",
+    "split": "test",
+    "question": "How should we investigate retry amplification?",
+    "service": "payments",
+    "reference_time": "2026-09-01T12:00:00+00:00",
+    "answerable": true,
+    "relevant_sections": [
+      "rb-retry:interpretation",
+      "rb-retry:diagnostic-steps"
+    ]
+  },
+  {
+    "id": "q-19",
+    "split": "dev",
+    "question": "Historical case 1 DB_POOL_TIMEOUT",
+    "service": "postgres",
+    "reference_time": "2026-09-01T12:00:00+00:00",
+    "answerable": true,
+    "relevant_sections": [
+      "inc-01:interpretation",
+      "inc-01:diagnostic-steps"
+    ]
+  },
+  {
+    "id": "q-20",
+    "split": "dev",
+    "question": "Historical case 2 PSP_TIMEOUT",
+    "service": "payments",
+    "reference_time": "2026-09-01T12:00:00+00:00",
+    "answerable": true,
+    "relevant_sections": [
+      "inc-02:interpretation",
+      "inc-02:diagnostic-steps"
+    ]
+  },
+  {
+    "id": "q-21",
+    "split": "dev",
+    "question": "Historical case 3 SERIALIZATION_ERROR",
+    "service": "checkout",
+    "reference_time": "2026-09-01T12:00:00+00:00",
+    "answerable": true,
+    "relevant_sections": [
+      "inc-03:interpretation",
+      "inc-03:diagnostic-steps"
+    ]
+  },
+  {
+    "id": "q-22",
+    "split": "dev",
+    "question": "Historical case 4 TRAFFIC_GROWTH",
+    "service": "checkout",
+    "reference_time": "2026-09-01T12:00:00+00:00",
+    "answerable": true,
+    "relevant_sections": [
+      "inc-04:interpretation",
+      "inc-04:diagnostic-steps"
+    ]
+  },
+  {
+    "id": "q-23",
+    "split": "dev",
+    "question": "Historical case 5 missing",
+    "service": "checkout",
+    "reference_time": "2026-09-01T12:00:00+00:00",
+    "answerable": true,
+    "relevant_sections": [
+      "inc-05:interpretation",
+      "inc-05:diagnostic-steps"
+    ]
+  },
+  {
+    "id": "q-24",
+    "split": "test",
+    "question": "Historical case 6 deployment",
+    "service": "checkout",
+    "reference_time": "2026-09-01T12:00:00+00:00",
+    "answerable": true,
+    "relevant_sections": [
+      "inc-06:interpretation",
+      "inc-06:diagnostic-steps"
+    ]
+  },
+  {
+    "id": "q-25",
+    "split": "test",
+    "question": "Historical case 7 RESERVATION_CONFLICT",
+    "service": "inventory",
+    "reference_time": "2026-09-01T12:00:00+00:00",
+    "answerable": true,
+    "relevant_sections": [
+      "inc-07:interpretation",
+      "inc-07:diagnostic-steps"
+    ]
+  },
+  {
+    "id": "q-26",
+    "split": "test",
+    "question": "Historical case 8 SLOW_QUERY",
+    "service": "postgres",
+    "reference_time": "2026-09-01T12:00:00+00:00",
+    "answerable": true,
+    "relevant_sections": [
+      "inc-08:interpretation",
+      "inc-08:diagnostic-steps"
+    ]
+  },
+  {
+    "id": "q-27",
+    "split": "test",
+    "question": "Historical case 9 RETRY_BURST",
+    "service": "payments",
+    "reference_time": "2026-09-01T12:00:00+00:00",
+    "answerable": true,
+    "relevant_sections": [
+      "inc-09:interpretation",
+      "inc-09:diagnostic-steps"
+    ]
+  },
+  {
+    "id": "q-28",
+    "split": "dev",
+    "question": "Historical case 10 DB_POOL_TIMEOUT",
+    "service": "postgres",
+    "reference_time": "2026-09-01T12:00:00+00:00",
+    "answerable": true,
+    "relevant_sections": [
+      "inc-10:interpretation",
+      "inc-10:diagnostic-steps"
+    ]
+  },
+  {
+    "id": "q-29",
+    "split": "dev",
+    "question": "Historical case 11 PSP_TIMEOUT",
+    "service": "payments",
+    "reference_time": "2026-09-01T12:00:00+00:00",
+    "answerable": true,
+    "relevant_sections": [
+      "inc-11:interpretation",
+      "inc-11:diagnostic-steps"
+    ]
+  },
+  {
+    "id": "q-30",
+    "split": "dev",
+    "question": "Historical case 12 SERIALIZATION_ERROR",
+    "service": "checkout",
+    "reference_time": "2026-09-01T12:00:00+00:00",
+    "answerable": true,
+    "relevant_sections": [
+      "inc-12:interpretation",
+      "inc-12:diagnostic-steps"
+    ]
+  },
+  {
+    "id": "q-31",
+    "split": "dev",
+    "question": "What is the Redis cluster password?",
+    "service": "checkout",
+    "reference_time": "2026-09-01T12:00:00+00:00",
+    "answerable": false,
+    "relevant_sections": []
+  },
+  {
+    "id": "q-32",
+    "split": "dev",
+    "question": "Which Kubernetes pod has a GPU fault?",
+    "service": "checkout",
+    "reference_time": "2026-09-01T12:00:00+00:00",
+    "answerable": false,
+    "relevant_sections": []
+  },
+  {
+    "id": "q-33",
+    "split": "dev",
+    "question": "What was the production AWS bill yesterday?",
+    "service": "checkout",
+    "reference_time": "2026-09-01T12:00:00+00:00",
+    "answerable": false,
+    "relevant_sections": []
+  },
+  {
+    "id": "q-34",
+    "split": "dev",
+    "question": "Who approved the real customer refund?",
+    "service": "checkout",
+    "reference_time": "2026-09-01T12:00:00+00:00",
+    "answerable": false,
+    "relevant_sections": []
+  },
+  {
+    "id": "q-35",
+    "split": "test",
+    "question": "Which employee owns the private SSH key?",
+    "service": "checkout",
+    "reference_time": "2026-09-01T12:00:00+00:00",
+    "answerable": false,
+    "relevant_sections": []
+  },
+  {
+    "id": "q-36",
+    "split": "test",
+    "question": "What is the Kafka broker disk capacity?",
+    "service": "checkout",
+    "reference_time": "2026-09-01T12:00:00+00:00",
+    "answerable": false,
+    "relevant_sections": []
+  },
+  {
+    "id": "q-37",
+    "split": "test",
+    "question": "What is the actual warehouse revenue today?",
+    "service": "checkout",
+    "reference_time": "2026-09-01T12:00:00+00:00",
+    "answerable": false,
+    "relevant_sections": []
+  },
+  {
+    "id": "q-38",
+    "split": "test",
+    "question": "Which DNS record was changed in production?",
+    "service": "checkout",
+    "reference_time": "2026-09-01T12:00:00+00:00",
+    "answerable": false,
+    "relevant_sections": []
+  },
+  {
+    "id": "q-39",
+    "split": "test",
+    "question": "What is the GPU model used for inference?",
+    "service": "checkout",
+    "reference_time": "2026-09-01T12:00:00+00:00",
+    "answerable": false,
+    "relevant_sections": []
+  },
+  {
+    "id": "q-40",
+    "split": "test",
+    "question": "What is the Slack webhook secret?",
+    "service": "checkout",
+    "reference_time": "2026-09-01T12:00:00+00:00",
+    "answerable": false,
+    "relevant_sections": []
+  }
+]

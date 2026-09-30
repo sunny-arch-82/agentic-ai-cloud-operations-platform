@@ -1,0 +1,11 @@
+{
+  "question": "Investigate checkout latency and errors; compare dependencies and recent changes.",
+  "service": "checkout",
+  "dataset_id": "s01",
+  "reference_time": "2026-09-01T12:00:00Z",
+  "time_window": {
+    "start": "2026-09-01T11:00:00Z",
+    "end": "2026-09-01T12:00:00Z"
+  },
+  "retrieval_mode": "hybrid"
+}
