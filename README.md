@@ -1,6 +1,6 @@
 # OpsPilot
 
-**Agentic AI Operations & Knowledge Platform · v1.0.0-portfolio**
+**Agentic AI Operations & Knowledge Platform · v1.0.0.**
 
 Investigate operational incidents with runbooks, historical incidents, logs, metrics, and deployment records. OpsPilot gathers evidence through typed MCP tools, coordinates an investigator and verifier with LangGraph, and returns structured reports with resolvable citations.
 
